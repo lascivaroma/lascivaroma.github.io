@@ -96,12 +96,25 @@
                 <p><b>Quick access</b></p>
                 <ul>
                     <li><a href="#who">Who's behind it?</a></li>
+                    <li>Publications</li>
+                    <ul>
+                        <li><a href="#phd">PhD Thesis</a></li>
+                        <li><a href="#noise">Conference Paper: Don't worry, it's just noise</a></li>
+                    </ul>
                     <li>Datasets</li>
                     <ul>
-                        <li>Database of Latin Sexual Discourses</li>
-                        <li>Latin Lemmatized Texts</li>
+                        <li><a href="#db">Database of Latin Sexual Discourses</a></li>
+                        <li><a href="#llt">Latin Lemmatized Texts</a></li>
+                        <li><a href="#lr">Lexical Resources</a></li>
+                        <li><a href="#priapea">Priapea</a></li>
+                        <li><a href="#gold">Gold corpus of Latin lemmatised and annotated in morpho-syntax</a></li>
+                        <li><a href="#digiliblt">DigilibLT Corpus</a></li>
+                        <li><a href="#additional">Additional Texts</a></li>
                     </ul>
                     <li>Tools and websites</li>
+                    <ul>
+                        <li><a href="#pie">Pie-Extended</a></li>
+                    </ul>
                 </ul>
             </div>
         </section>
@@ -119,18 +132,25 @@
                 <img src="assets/images/clerice.jpeg" alt="Naissance de Venus, Botticelli" width="100%" />
             </div>
         </section>
+        <h2 class="offset-md-1">"Classic" publications</h2>
         <section class="row" style="margin-top:1em;">
             <div class="offset-md-1 col-md-10">
-                <h2>"Classic" publications</h2>
-                <h3>PhD Thesis</h3>
+                <h3 id="phd">PhD Thesis</h3>
                 <p style="font-size: smaller;"><b>Abstract:</b> In 1982, James N. Adams produced the reference study of the Latin sexual vocabu-lary. In his book, the author presented a wide range of words or expressions refined by their stylistic (metaphor, metonymy, etc.) and semantic (war, cooking, hunting, vio-lence...) features for various categories (acts, male and female pudenda, etc.). Around the same time, François Rastier refined the definition of isotopy as the “the recurrence of the same semantic feature” in a text. We built a completely new Latin meta-corpus of 20 million words in TEI based on the works of existing projects and news sources. Using this meta-corpus and the work of Adams, we built a new completely new digital “handout” that provide 2500 examples of Latin sexual isotopies. To treat the corpus, we developed a method and the tools to lemmatize and annotate morphological and syntactical features of Classical and Late Latin texts. Finally, we set ourselves up to test deep learning methods to detect isotopies in Latin texts spanning from -200 BCE up to the 700 CE. This method should provide the foundation for building new “vocabularies” for other isotopies in the future. A selection of methods show robust results with a full corpus, and we discuss the limits of these models based on the corpus size or the difficulty of the task.</p>
-                <p><i class="fa fa-link"></i> <u>Links:</u> <a href="https://www.theses.fr/s226893">Download PDF</a> -- <a href="https://github.com/PonteIneptique/these-redaction">Download LaTeX</a></p>
+                <p><i class="fa fa-link"></i> <u>Links:</u> <a href="https://www.theses.fr/s226893">Download PDF</a> -- <a href="https://github.com/PonteIneptique/these-redaction">Download LaTeX</a>  -- <a href="https://github.com/lascivaroma/PhD-Thesis-Clerice-Code">Experiment code</a> -- <a href="https://github.com/lascivaroma/seligator">Semantic Classifier</a></p>
+            </div>
+        </section>
+        <section class="row" style="margin-top:1em;">
+            <div class="offset-md-1 col-md-10">
+                <h3 id="noise">"Don't worry, it's just noise": quantifying the impact of files treated as single textual units when they are really collections</h3>
+                <p style="font-size: smaller;"><b>Abstract:</b> Literature works may present many autonomous or semi-autonomous units, such as poems for the first or chapter for the second. We make the hypothesis that such cuts in the text's flow, if not taken care of in the way we process text, have an impact on the application of the distributional hypothesis. We test this hypothesis with a large 20M tokens corpus of Latin works, by using text files as a single unit or multiple "autonomous" units for the analysis of selected words. For groups of rare words and words specific to heavily segmented works, the results show that their semantic space is mostly different between both versions of the corpus. For the 1000 most frequent words of the corpus, variations are important as soon as the window for defining neighborhood is larger or equal to 10 words.</p>
+                <p><i class="fa fa-link"></i> <u>Links:</u> <a href="https://hal.science/hal-03481620">Download PDF</a> -- <a href="https://github.com/PonteIneptique/these-redaction">Download LaTeX</a></p>
             </div>
         </section>
         <h2 class="offset-md-1">Datasets</h2>
         <section class="row" style="margin-top:1em;">
             <div class="offset-md-1 col-md-6">
-                <h3>Database of Latin Sexual Discourses</h3>
+                <h3 id="#db">Database of Latin Sexual Discourses</h3>
                  <p>The Database of Latin Sexual Discourses contains 2500 excerpts of Latin Literature where sexual content is discussed (e.g. reproduction, medical approach) or used (e.g. aggressive use of sexuality). 
                     All excerpts were annotated manually (see below for source) and contain a single analysis of a specific sense of a word or group of words. Each excerpt is identified through the original CTS URN of the excerpt as well as the version and source of the text. All excerpt are automatically annotated regarding linguistic features (lemma, POS, morphology).</p>
                 <p>It is originally based on the work of James Noel Adams, <i>The Latin Sexual Vocabulary</i> (it can actually be used as a companion app when reading the latest).</p>
@@ -144,7 +164,7 @@
         </section>
         <section class="row" style="margin-top:1em;">
             <div class="offset-md-1 col-md-6">
-                <h3>The Latin Lemmatized Texts</h3>
+                <h3 id="#llt">The Latin Lemmatized Texts</h3>
                 <p>The <a href="https://github.com/lascivaroma/latin-lemmatized-texts">Latin Lemmatized Texts</a> is a set of 21.3 million lemmatized tokens with POS and morphological analysis. Each token is identified within the citation scheme of the text, according to the Canonical Text Services URN system, and in general to the citation schemes of classical texts. The lemmatization is versioned. Six source corpora are used to build this corpus: the source of each text is provided, along with the version of the lemmatizer and model at the time of the last update.</p>
                 <p><i class="fa fa-link"></i> <u>Links:</u> <a href="https://github.com/lascivaroma/latin-lemmatized-texts">Github</a> -- <a href="https://doi.org/10.5281/zenodo.4337145">Zenodo</a></p>
                 <p><u>Reused by:</u> Grotto et al., <i>The Annotation of Liber Abbaci, a Domain-Specific Latin Resource</i> [<a href="https://ceur-ws.org/Vol-3033/paper24.pdf">Link</a>].</p>
@@ -157,7 +177,7 @@
         </section>
         <section class="row" style="margin-top:1em;">
             <div class="offset-md-1 col-md-6">
-                <h3>Lexical Resources</h3>
+                <h3 id="lr">Lexical Resources</h3>
                 <p>The <em>Ground truth and Models for Lexical Resources OCR</em> is a set of 3 Latin lexicons: 1 Latin-French & 1 Latin-only lexicons on sexuality; 1 Latin-Latin synonym lexicon. It contains the original data (from Archive.org, Gutenberg, etc.), the scripts to generate the final items as well as the final items in XML TEI.</p>
                 <p><i class="fa fa-link"></i> <u>Links:</u> <a href="https://github.com/lascivaroma/lexical">Github</a></p>
                 <hr />
@@ -168,7 +188,7 @@
         </section>
         <section class="row" style="margin-top:1em;">
             <div class="offset-md-1 col-md-6">
-                <h3>Priapea and Lemmatized Priapea</h3>
+                <h3 id="priapea">Priapea and Lemmatized Priapea</h3>
                 <p>The <em>Priapea</em> is a very important book for the history of sexuality in Latin, as it contains roughly 80 poems about sex or Priapus in general (specifically, when it's not about sex, it's about protecting gardens). The <em>Priapea</em> have been edited in TEI, reusing an original transcript of an unknown edition, and aligning with the Teubner edition of 1879 (Public Domain). All Priapea have been annotated manually in a secondary repository with lemma, POS and morphology.</p>
                 <p><i class="fa fa-link"></i> <u>Links:</u> <a href="https://github.com/lascivaroma/priapeia">Github of the Edition</a> -- <a href="https://github.com/lascivaroma/priapea-lemmatization">Github for annotations</a>  -- <a href="https://lascivaroma.github.io/priapea-lemmatization">Lemmatization vizualisation</a></p>
                 <p><u>Reused by:</u> Perseus Scaife Viewer, [<a href="https://scaife.perseus.org/reader/urn:cts:latinLit:phi1103.phi001.lascivaroma-lat1:1.1-1.8/">Link</a>].</p>
@@ -180,7 +200,7 @@
         </section>
         <section class="row" style="margin-top:1em;">
             <div class="offset-md-1 col-md-6">
-                <h3>[Collab] From the 2nd century to Thomas More, a gold corpus of Latin lemmatised and annotated in morpho-syntax</h3>
+                <h3 id="gold">[Collab] From the 2nd century to Thomas More, a gold corpus of Latin lemmatised and annotated in morpho-syntax</h3>
                 <p>This corpus has been designed by Anthony Glaise and Thibault Clérice for testing the robustness of our MSD and lemmatization models trained on classical Latin data. It was built in three phases, which you can find in raw. <br /> Anthony Glaise corrected and checked all annotations, chose most of the texts with guidelines by Thibault Clérice. Thibault Clérice provided data engineering, technical support, annotations guidelines and data analysis (publication forthcoming)..</p>
                 <p><i class="fa fa-link"></i> <u>Links:</u> <a href="https://github.com/chartes/latin-2nd-century-to-thomas-more">Github</a> -- <a href="https://doi.org/10.5281/zenodo.6383162">Zenodo</a></p>
                 <hr />
@@ -191,7 +211,7 @@
         </section>
         <section class="row" style="margin-top:1em;">
             <div class="offset-md-1 col-md-6">
-                <h3>[Reuse] DigilibLT Corpus</h3>
+                <h3 id="digiliblt">[Reuse] DigilibLT Corpus</h3>
                 <p>[Quote from the original website]: "The Digital Library of Late-Antique Latin Texts—DigilibLT—publishes secular prose texts written in Latin in late antiquity (from the second to the seventh century AD). The texts are annotated according to the XML-TEI standards and are offered free of charge to the public for reading and research."</p>
                 <p>This version of the DigilibLT corpus makes use of the Capitains definition of passages and structures, in order to make passages machine-actionable</p>
                 <p><i class="fa fa-link"></i> <u>Links:</u> <a href="https://digiliblt.uniupo.it/index.php">Original Website</a> -- <a href="https://github.com/lascivaroma/digiliblt">Github Reuse</a></p>
@@ -203,22 +223,19 @@
         </section>
         <section class="row" style="margin-top:1em;">
             <div class="offset-md-1 col-md-6">
-                <h3>[Reuse] Additional Texts</h3>
+                <h3 id="additional">[Reuse] Additional Texts</h3>
                 <p>This corpus provides Capitains XML TEI versions of document either not available in standard XML TEI format or in machine actionable Capitains encoding. It provides unique texts, including an edition adapted from the PDF of the PhD thesis of Dr. Lesley Bolton (Calgary) who gave us the authorization to publish it openly.</p>
                 <p><i class="fa fa-link"></i> <u>Links:</u> <a href="https://github.com/lascivaroma/additional-texts/">Github</a></p>
                 <hr />
             </div>
         </section>
-               
-               
-                <!-- https://ceur-ws.org/Vol-3033/paper24.pdf -->
-                <!-- https://github.com/bnagy/rhyme-paper/blob/main/digilat.bib -->
         <h2 class="offset-md-1">Tools and models</h2>
         <section class="row" style="margin-top:1em;">
             <div class="offset-md-1 col-md-6">
-                <h3>Pie-Extended</h3>
+                <h3 id="pie">Pie-Extended</h3>
                 <p>Pie-Extended is a lemmatizer and POS-tagger which includes pre- and post-processing of the content to adapt the data to be tagged according to ground truth standards. It is a wrapper for <a href="https://github.com/lascivaroma/PaPie">PaPie</a>.</p>
-                <p><i class="fa fa-link"></i> <u>Links:</u> <a href="https://github.com/hipster-philology/nlp-pie-taggers">Github</a></p>
+                <p><i class="fa fa-link"></i> <u>Links:</u> <a href="https://github.com/hipster-philology/nlp-pie-taggers">Github</a> -- <a href="https://github.com/PonteIneptique/latin-lasla-models">Latin Model</a></p>
+                <p><u>Reused by:</u> B. Nagy, <em>Rhyme in classical Latin poetry: Stylistic or stochastic?</em> (2022) [<a href="https://doi.org/10.1093/llc/fqab105">Link</a>]</p>
                 <hr />
             </div>
         </section>
